@@ -1,0 +1,35 @@
+{
+  "name": "dz15",
+  "version": "1.0.0",
+  "description": "form",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "lint": "eslint ./js",
+    "lint:fix": "eslint ./js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richiberlin/dz15.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richiberlin/dz15/issues"
+  },
+  "homepage": "https://github.com/richiberlin/dz15#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "2.0.5",
+    "sass": "^1.26.8"
+  },
+  "dependencies": {}
+}

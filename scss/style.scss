@@ -1,0 +1,66 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+.container {
+	width: 600px;
+	margin: 100px auto;
+	background: rgb(238, 237, 237);
+}
+form {
+	width: 400px;
+	padding: 20px 0 50px 0;
+	margin: 0 auto;
+}
+.resume {
+  .alert {
+      display: none;
+  }
+}
+.resume.invalid {
+  input:invalid {
+      border-color: red($color: #f30606ed);
+      & ~ .alert {
+          display: block;
+      }
+  }
+}
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	outline: none;
+}
+textarea {
+	&:invalid {
+		border: 1px dashed red;
+	}
+	&:valid {
+		border: 1px solid lime;
+	}
+}
+button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin: 10px auto;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+label {
+	padding: 10px 0;
+	font-size: 14px;
+}
+h3 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/98db508811.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="./js/app.js" defer></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container pt-3">
+      <h3>Пожалуйста, заполните форму</h3>
+
+      <form class="resume">
+        <div class="form-group">
+          <label for="firstname">Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            name="firstname"
+            placeholder="Ваше имя"
+            minlength="2"
+            maxlength="30"
+            required
+          />
+          <div class="alert alert-danger">
+            Введите ваше имя, количество символов от 2 до 30
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Фамилия</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            name="lastname"
+            placeholder="Ваша фамилия"
+            minlength="2"
+            maxlength="30"
+            required
+          />
+          <div class="alert alert-danger">
+            Введите вашу фамилию, количество символов от 2 до 30
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="age">Возраст, лет</label>
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            name="age"
+            placeholder="Ваш возраст"
+            min="12"
+            max="80"
+          />
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="gendermale"
+            name="gender"
+            value="male"
+            checked
+          />
+          <label for="gendermale">мужской</label>
+
+          <input type="radio" id="gendermale" name="gender" value="female" />
+          <label for="gendermale">женский</label>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            name="phone"
+            placeholder="Ваш номер телефона"
+            minlength="7"
+            maxlength="12"
+            required
+          />
+          <div class="alert alert-danger">
+            Введите корректный номер телефона
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Введите ваш email ..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="about">Расскажите еще немного о себе</label>
+          <textarea
+            id="about"
+            name="about"
+            rows="5"
+            cols="47"
+            minlength="5"
+            maxlength="500"
+          ></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="termsAccepted"
+            name="termsAccepted"
+            required
+          />
+          <label for="termsAccepted">Пользовательское соглашение</label>
+          <div class="alert alert-danger">
+            Вам надо принять соглашение
+          </div>
+        </div>
+        <button class="btn btn-success" type="submit">Отправить</button>
+      </form>
+    </div>
+  </body>
+</html>
