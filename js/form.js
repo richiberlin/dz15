@@ -1,3 +1,5 @@
+import { storage } from "./storage";
+
 export class FormNative {
   constructor(form) {
     this.form = form;
@@ -9,25 +11,27 @@ export class FormNative {
   }
 
   _init() {
-    this.btnSubmit.addEventListener('click', this._handleSubmitForm);
+    this.btnSubmit.addEventListener("click", this._handleSubmitForm);
   }
 
   _submitForm(event) {
     event.preventDefault();
 
     if (!this.form.checkValidity()) {
-      this.form.classList.add('invalid');
+      this.form.classList.add("invalid");
     } else {
-      this.form.classList.remove('invalid');
+      this.form.classList.remove("invalid");
 
       const formData = new FormData(this.form);
-      formData.append('token', 'fgjsnjvkdfhsdjfhhuu5w4958y0457y03y5vm745y');
+      formData.append("token", "fgjsnjvkdfhsdjfhhuu5w4958y0457y03y5vm745y");
 
       const now = new Date();
-      formData.append('time', now);
+      formData.append("time", now);
 
       const resume = {};
       for (const [name, value] of formData) {
+        storage.set(name, value);
+
         resume[name] = value;
       }
 
